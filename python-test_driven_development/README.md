@@ -31,14 +31,12 @@ Test Driven Development (TDD) using Python.
   python3 -m doctest ./tests/*
 
 
-Run unittests with:
+## Run unittests with:
 
 python3 -m unittest tests.6-max_integer_test
 
 
----
-
-Files
+## Files
 
 0-add_integer.py
 
@@ -54,4 +52,4 @@ Files
 
 tests/
 
----
+
