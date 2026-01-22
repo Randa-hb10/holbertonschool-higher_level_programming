@@ -1,14 +1,36 @@
->>> text_indentation = __import__('5-text_indentation').text_indentation
+The ``5-text_indentation`` module
+=================================
 
->>> text_indentation("Hello. How are you?")
-Hello
-<BLANKLINE>
-How are you
-<BLANKLINE>
+Using ``text_indentation``
+--------------------------
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("No special characters")
-No special characters
+Normal Case:
+    >>> text_indentation("Hello. How are you? Fine: thanks.")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    thanks.
+    <BLANKLINE>
 
->>> text_indentation(123)
-Traceback (most recent call last):
-TypeError: text must be a string
+Checking for leading/trailing spaces:
+    >>> text_indentation("  Wait.   What? ")
+    Wait.
+    <BLANKLINE>
+    What?
+    <BLANKLINE>
+
+Non-string input:
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Missing argument:
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
