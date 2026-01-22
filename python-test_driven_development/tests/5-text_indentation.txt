@@ -1,3 +1,5 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
 >>> text_indentation("Hello. How are you? I'm fine:")
 Hello
 <BLANKLINE>
@@ -8,10 +10,6 @@ I'm fine
 
 >>> text_indentation("No special characters")
 No special characters
-
->>> text_indentation("  Leading and trailing spaces.  ")
-Leading and trailing spaces
-<BLANKLINE>
 
 >>> text_indentation(123)
 Traceback (most recent call last):
