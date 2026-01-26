@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-class Square:
 
+"""Defines an empty Square class."""
+
+class Square:
     '''This class represents a square in its initial stage with no properties '''
+    pass
