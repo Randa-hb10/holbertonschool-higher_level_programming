@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""Defines a Rectangle class with width, height, and string representation."""
 
 
 class Rectangle:
-    """Rectangle class with width, height, area and perimeter."""
+    """Rectangle class with width, height, area, perimeter, and str."""
 
     def __init__(self, width=0, height=0):
+        """Initialize rectangle with optional width and height."""
         self.width = width
         self.height = height
 
@@ -16,7 +17,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Set the width."""
+        """Set the width with type and value checks."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -30,7 +31,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set the height."""
+        """Set the height with type and value checks."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -46,3 +47,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """Return string representation of the rectangle using #."""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        lines = []
+        for _ in range(self.__height):
+            lines.append("#" * self.__width)
+        return "\n".join(lines)
+
