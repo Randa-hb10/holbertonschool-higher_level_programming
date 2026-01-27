@@ -1,16 +1,11 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class with width, height, area, perimeter,
-str, repr, and deletion message.
-"""
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
-    """Rectangle class with width, height, area, perimeter, __str__,
-    __repr__, and __del__.
-    """
+    """Represents a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialize rectangle with optional width and height."""
         self.width = width
         self.height = height
 
@@ -21,7 +16,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Set the width with type and value checks."""
+        """Set the width."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -35,7 +30,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set the height with type and value checks."""
+        """Set the height."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -53,16 +48,15 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return string representation of the rectangle using #."""
+        """Return the rectangle with # characters."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        lines = ["#" * self.__width for _ in range(self.__height)]
-        return "\n".join(lines)
+        return "\n".join("#" * self.__width for _ in range(self.__height))
 
     def __repr__(self):
-        """Return string representation to recreate a new instance using eval()."""
+        """Return a string to recreate the instance."""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Print a message when an instance is deleted."""
+        """Print message when instance is deleted."""
         print("Bye rectangle...")
