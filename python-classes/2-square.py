@@ -3,7 +3,15 @@
 
 
 class Square:
-    """Represents a square with a private size attribute."""
+    """Represents a square with a private size attribute
+
+        Args:
+            size (int): Size of the square.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+    """
 
     def __init__(self, size=0):
         """Initialize the square with optional size, validating type and value."""
