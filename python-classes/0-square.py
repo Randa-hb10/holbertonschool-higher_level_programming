@@ -4,3 +4,4 @@
 class Square:
     """Represents a square in its initial stage with no properties."""
     pass
+
