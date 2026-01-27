@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class with width, height, area, perimeter, str, and repr."""
+"""Defines a Rectangle class with width, height, area, perimeter,
+str, and repr.
+"""
 
 
 class Rectangle:
-    """Rectangle class with width, height, area, perimeter, __str__, and __repr__."""
+    """Rectangle class with width, height, area, perimeter, __str__, and
+    __repr__.
+    """
 
     def __init__(self, width=0, height=0):
         """Initialize rectangle with optional width and height."""
@@ -57,4 +61,6 @@ class Rectangle:
 
     def __repr__(self):
         """Return string representation to recreate a new instance using eval()."""
-        return f"Rectangle({self.__width}, {self.__height})"
+        return (
+            f"Rectangle({self.__width}, {self.__height})"
+        )
